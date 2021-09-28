@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cards {
+  @apply md:flex md:flex-wrap;
+  &__card {
+    @apply lg:w-1/3 md:w-1/2 mb-4 md:px-2;
+    &-body {
+      @apply xl:flex p-2 rounded shadow-lg;
+      &-img {
+        @apply xl:w-1/2;
+        img {
+          @apply w-full md:h-full h-60 rounded;
+        }
+      }
+      &-info {
+        @apply xl:w-1/2 xl:pl-2;
+      }
+    }
+  }
+}
+.btn {
+  @apply text-white duration-500 p-2 rounded;
+}
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700;
+}
+.btn-danger {
+  @apply bg-red-600 hover:bg-red-700;
+}
+.btn-success {
+  @apply bg-green-500 hover:bg-green-600;
+}
+.btn-secondery {
+  @apply bg-gray-600 hover:bg-gray-700;
+}
+.nav {
+  @apply lg:flex bg-gray-100  justify-center;
+  &__item {
+    @apply px-3 lg:py-4 py-2;
+  }
+}
+.humberger-menu {
+  @apply lg:hidden block ml-auto my-2 mr-2;
+  &__icon {
+    @apply font-bold text-xl bg-gray-600 p-2 rounded text-white block transform rotate-90;
+  }
+}
+.filter-menu {
+  @apply md:flex md:flex-wrap md:items-center md:justify-between;
+  &__items {
+    @apply md:flex md:flex-wrap;
+    &-item {
+      @apply md:w-auto w-full;
+      &-btn {
+        @apply md:w-auto w-full m-1 btn;
+      }
+    }
+
+  }
+  &__text {
+    @apply md:text-left text-center md:my-auto my-2;
+  }
+}
